@@ -1,0 +1,54 @@
+# --- Secrets & local-only material (never commit) ---
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets/
+local/
+
+# --- Generated data ---
+data/
+outputs/
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+*.log
+
+# --- Model weights & caches ---
+*.gguf
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.onnx
+models/
+.cache/
+hf_cache/
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+build/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# --- Node / frontend ---
+node_modules/
+frontend/dist/
+*.tsbuildinfo
+
+# --- Editors & OS ---
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+desktop.ini

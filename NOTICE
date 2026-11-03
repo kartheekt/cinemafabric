@@ -1,0 +1,36 @@
+CinemaFabric
+Copyright (c) 2026 Kartheek T. Licensed under the MIT License (see LICENSE).
+
+CinemaFabric's own code is MIT-licensed. It does not include model weights. Models it can use are
+downloaded or called at run time and are governed by their own licences:
+
+Built with Llama.
+Llama 3.1 is licensed under the Llama 3.1 Community License, Copyright (c) Meta Platforms, Inc. All Rights Reserved.
+Llama 3.2 (including Llama Guard 3 1B) is licensed under the Llama 3.2 Community License,
+Copyright (c) Meta Platforms, Inc. All Rights Reserved.
+Use of Llama models must follow the Llama Acceptable Use Policy: https://www.llama.com/llama3_1/use-policy/
+
+SAM 3 and the meta-sam-parser package are licensed under the SAM License, Copyright (c) Meta Platforms, Inc.
+A copy of the SAM License is distributed with meta-sam-parser.
+SAM 2.1 is licensed under the Apache License 2.0.
+
+MusicGen and MMS-TTS weights are licensed under CC-BY-NC 4.0 (non-commercial). They are optional and can be
+excluded by removing "cc-by-nc-4.0" from the allowed licences in the profile, or for a single film with the
+commercial-safe switch.
+
+Muse Glimmer is licensed under the Apache License 2.0.
+
+The depth model (facebook/dpt-dinov2-small-nyu, built on DINOv2) is licensed under the Apache License 2.0.
+AudioSeal is licensed under the MIT License.
+
+Muse Spark, Muse Wonder, Muse Image, SAM 3.1 and Muse Voice Transcribe are used through the Meta Model API under
+Meta's terms for that service.
+
+The renderer uses OpenCV (opencv-python-headless), licensed under the Apache License 2.0. Its wheels bundle
+third-party libraries under their own licences, including FFmpeg under the LGPL.
+
+Content Credentials are written with c2pa-python (the Content Authenticity Initiative's C2PA library), licensed
+under the Apache License 2.0 or the MIT License, and the cryptography package, licensed under the Apache License 2.0
+or the BSD License.
+
+The Docker image includes ffmpeg from Debian, which is licensed under the LGPL/GPL; source is available from Debian.

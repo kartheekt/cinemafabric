@@ -1,0 +1,10 @@
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+  - job_name: cinemafabric
+    metrics_path: /metrics
+    authorization:
+      credentials_file: /data/fabric_token
+    static_configs:
+      - targets: ["fabric:8100"]

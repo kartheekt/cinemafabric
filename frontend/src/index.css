@@ -1,0 +1,132 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #0a0b0f;
+  --color-panel: #12141b;
+  --color-panel-2: #181b24;
+  --color-line: #262a36;
+  --color-muted: #8a90a2;
+  --color-text: #e9e6df;
+  --color-gold: #f5b84a;
+  --color-sky: #5ec8ff;
+  --color-good: #4ade80;
+  --color-bad: #f87171;
+  --font-display: "Georgia", "Times New Roman", serif;
+  --font-sans: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "Cascadia Code", "SFMono-Regular", Consolas, monospace;
+}
+
+html,
+body {
+  background: var(--color-ink);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(1200px 500px at 15% -10%, rgba(245, 184, 74, 0.08), transparent 60%),
+    radial-gradient(900px 500px at 100% 0%, rgba(94, 200, 255, 0.07), transparent 60%),
+    var(--color-ink);
+}
+
+.card {
+  background: var(--color-panel);
+  border: 1px solid var(--color-line);
+  border-radius: 14px;
+}
+
+.label {
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+.seg {
+  display: flex;
+  gap: 4px;
+  padding: 4px;
+  border-radius: 10px;
+  background: var(--color-ink);
+  border: 1px solid var(--color-line);
+}
+
+.seg button {
+  flex: 1;
+  padding: 7px 8px;
+  border-radius: 7px;
+  font-size: 13px;
+  color: var(--color-muted);
+  transition: background 0.15s, color 0.15s;
+}
+
+.seg button[aria-pressed="true"] {
+  background: var(--color-panel-2);
+  color: var(--color-text);
+  box-shadow: inset 0 0 0 1px var(--color-line);
+}
+
+.film-grain::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.015) 0 1px, transparent 1px 3px);
+}
+
+@keyframes pulse-dot {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.35;
+  }
+}
+
+.pulse {
+  animation: pulse-dot 1.2s ease-in-out infinite;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-line);
+  border-radius: 8px;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@keyframes fly {
+  from {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+  to {
+    transform: translate(var(--dx), var(--dy));
+    opacity: 0.15;
+  }
+}
+
+.fly {
+  animation: fly 1.4s ease-out forwards;
+}

@@ -1,0 +1,41 @@
+[cloud]
+text = "muse-spark-1.3-contributor"
+text_standard = "muse-spark-1.3"
+text_premium = "muse-wonder-1.0"
+image = "muse-image-1.0"
+segment = "sam-3.1"
+transcribe = "muse-voice-transcribe-1.0"
+
+[budget]
+limit_usd = 0
+stop_usd = 0
+
+[licences]
+allowed = ["meta-model-api", "apache-2.0", "mit", "llama", "sam", "cc-by-nc-4.0", "builtin"]
+
+[models]
+families = ["llama", "muse", "glimmer"]
+# Models on a machine's Ollama that a node should leave out of the fabric, by exact name.
+ignore = []
+
+[safety]
+moderation = "best_effort"
+second_opinion = true
+block = ["S3", "S4", "S8", "S9", "S10", "S11", "S12"]
+
+[style]
+# Writing guidance, not content rules: names, title patterns and phrases that language models overuse, so
+# scripts read as written rather than generated. Added to every writing prompt; clear a list to disable it.
+avoid_phrases = [
+    "in a world", "one choice", "everything will change", "nothing will ever be the same", "destiny",
+    "journey", "the fate of", "unravel", "embark", "little did they know", "a force", "darkness rises", "only one can",
+]
+avoid_names = ["Elara", "Kael", "Lyra", "Aria", "Zara", "Orion", "Nova", "Seraphina"]
+avoid_title_patterns = ["The Last …", "Echoes of …", "Whispers of …", "Shadows of …"]
+
+[export]
+presenter = "CinemaFabric"
+
+[node]
+reserve_gb = 1.5
+worker_port = 8201

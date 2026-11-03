@@ -1,0 +1,59 @@
+[local.tts]
+models = ["facebook/mms-tts-eng"]
+by_language = "facebook/mms-tts-{lang}"
+licence = "cc-by-nc-4.0"
+memory_gb = 0.5
+devices = ["cuda", "mps", "cpu"]
+quality = 2
+typical_s = 3
+
+[local.music]
+models = ["facebook/musicgen-stereo-medium"]
+licence = "cc-by-nc-4.0"
+memory_gb = 5.0
+heavy = true
+devices = ["cuda", "mps"]
+quality = 2
+typical_s = 40
+
+[local.segment]
+models = ["facebook/sam3", "facebook/sam2.1-hiera-base-plus"]
+licence = "sam"
+memory_gb = 3.5
+on_call = true
+devices = ["cuda", "mps", "cpu"]
+quality = 1
+typical_s = 3
+
+[local.depth]
+models = ["facebook/dpt-dinov2-small-nyu"]
+licence = "apache-2.0"
+memory_gb = 2.7
+heavy = true
+devices = ["cuda", "mps", "cpu"]
+quality = 2
+typical_s = 3
+
+[local.watermark]
+models = ["audioseal_wm_16bits"]
+licence = "mit"
+memory_gb = 0.3
+devices = ["cuda", "mps", "cpu"]
+quality = 2
+typical_s = 10
+duplicate = false
+on_call = true
+
+[cloud]
+licence = "meta-model-api"
+
+[ollama.families]
+llama = "llama"
+muse = "apache-2.0"
+glimmer = "apache-2.0"
+
+[notices]
+llama = "Built with Llama. Llama is licensed under the Llama Community License, Copyright (c) Meta Platforms, Inc. All Rights Reserved."
+sam = "Cutouts made with SAM, licensed under the SAM License, Copyright (c) Meta Platforms, Inc."
+"cc-by-nc-4.0" = "Some audio was made with CC-BY-NC-4.0 models and may be used for non-commercial purposes only."
+meta-model-api = "Generated through the Meta Model API, under Meta's terms for that service."
