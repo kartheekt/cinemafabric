@@ -6,7 +6,7 @@ CinemaFabric makes the machines you already own and the Meta Model API work as o
 
 The studio built on the fabric turns a one-sentence idea into a finished trailer or short film, complete with a script, storyboard, poster, voice-over, score, subtitles and release copy. It is a demanding test of the fabric: a 20-second trailer is around sixty tasks of nine kinds (writing, safety checks, pictures, cutouts, depth, speech, music, transcription and watermarking), and the router places each one.
 
-Built for the Meta AI Global Developer Hackathon 2026. **Built with Llama.**
+Built for the Meta Global AI Developer Hackathon. **Built with Llama.**
 
 *The banner was painted by Muse Image and the [architecture diagrams](docs/architecture.md) were drawn by Muse Spark, both routed through CinemaFabric itself.*
 
